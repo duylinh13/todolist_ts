@@ -1,0 +1,120 @@
+h1 {
+  text-align: center;
+  color: #050505;
+}
+
+/* App.css */
+
+.App {
+  font-family: "Arial", sans-serif;
+}
+
+.header {
+  padding: 1rem;
+  background-color: #f9fafb; /* Light gray background */
+}
+
+.logoside h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333; /* Dark gray for the header text */
+}
+
+.main-content {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem; /* Adjust the border-radius */
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+  display: flex;
+}
+
+.space-x-2 > * + * {
+  margin-left: 0.5rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.rounded-full {
+  border-radius: 9999px; /* Fully rounded corners */
+}
+
+.border {
+  border-width: 1px;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.transition-colors {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.bg-blue-600 {
+  background-color: #2563eb; /* Blue background for active state */
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.text-gray-800 {
+  color: #1f2937; /* Dark gray text */
+}
+
+.border-gray-300 {
+  border-color: #d1d5db; /* Light gray border */
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: #f3f4f6; /* Light gray background on hover */
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
