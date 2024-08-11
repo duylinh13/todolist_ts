@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TodoTypes from "../todo";
 import TodoForm from "./TodoForm";
-import "../CSS/TodoList.css";
+import "../styles/TodoList.css";
 import { FaEdit, FaCheck } from "react-icons/fa";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { GiCancel } from "react-icons/gi";
@@ -10,16 +10,17 @@ interface TodoListProps {
   filter: 'all' | 'pending' | 'completed';
 }
 
-const initialTodos: TodoTypes[] = [
-  { id: 1, text: "Buy groceries", completed: false },
-  { id: 2, text: "Clean the house", completed: true },
-  { id: 3, text: "Walk the dog", completed: false }
-];
-
 const TodoList: React.FC<TodoListProps> = ({ filter }) => {
-  const [todos, setTodos] = useState<TodoTypes[]>(initialTodos);
+  const [todos, setTodos] = useState<TodoTypes[]>(() => {
+    const savedTodos = localStorage.getItem("todos");
+    return savedTodos ? JSON.parse(savedTodos) : [];
+  });
   const [editingTodoId, setEditingTodoId] = useState<number | null>(null);
   const [editedTodoText, setEditedTodoText] = useState<string>("");
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const handleEditStart = (id: number, text: string) => {
     setEditingTodoId(id);

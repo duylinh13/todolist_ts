@@ -1,0 +1,72 @@
+.inputForm {
+  height: auto; /* Adjust height based on content */
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-direction: row; /* Align items horizontally */
+  margin-top: 20px;
+}
+
+.inputForm > input {
+  height: 40px; /* Set a fixed height for the input field */
+  flex: 1; /* Allow input to grow and fill available space */
+  max-width: 600px; /* Adjust maximum width */
+  margin-right: 12px; /* Add space between input and button */
+  padding: 0 15px; /* Add padding for text inside the input */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background: #f9f9f9; /* Lighter background color */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px; /* Adjust font size */
+  text-align: left; /* Align text to the left */
+  border-radius: 25px; /* More rounded corners */
+  border: 1px solid #ddd; /* Light border for definition */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition effects */
+}
+
+.inputForm > input:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 8px rgba(0, 120, 215, 0.5); /* Highlight with a blue shadow */
+  border-color: #e7bceb; /* Change border color on focus */
+}
+
+.inputForm > input::placeholder {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5); /* Slightly darker placeholder text */
+}
+
+.inputForm > button {
+  font-family: "Roboto", sans-serif;
+  padding: 10px 20px; /* Add padding for the button */
+  background: #f0ceee; /* Modern blue background */
+  color: #000000; /* White text */
+  cursor: pointer;
+  font-weight: 600; /* Slightly bolder text */
+  border-radius: 25px; /* Match rounded corners with input */
+  border: none; /* Remove default border */
+  transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+}
+
+.inputForm > button:hover {
+  background: #e6c9e3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.inputForm > button:active {
+  background: #003d80; /* Even darker blue when button is pressed */
+  transform: scale(1); /* Return to normal size */
+}
+.editBtn > button {
+  background: none; /* Remove any background */
+  border: none; /* Remove borders */
+  color: #ffcc00; /* Yellow color for the edit icon */
+  cursor: pointer;
+  font-size: 1.5rem; /* Adjust size if needed */
+}
+
+.items > button {
+  background: none; /* Remove any background */
+  border: none; /* Remove borders */
+  color: #888; /* Gray color for the delete icon */
+  cursor: pointer;
+  font-size: 1.5rem; /* Adjust size if needed */
+}

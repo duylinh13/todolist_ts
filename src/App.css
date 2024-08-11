@@ -1,30 +1,71 @@
+/* General Styles */
 h1 {
   text-align: center;
   color: #050505;
 }
 
-/* App.css */
-
+/* App Container */
 .App {
   font-family: "Arial", sans-serif;
 }
 
+/* Header */
 .header {
-  padding: 1rem;
-  background-color: #f9fafb; /* Light gray background */
+  background-color: #ffffff; /* Đổi màu nền của header cho phù hợp */
+  color: #333; /* Đổi màu chữ cho header */
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
 }
 
+/* Logo Side */
 .logoside h1 {
   font-size: 2rem;
   font-weight: bold;
   color: #333; /* Dark gray for the header text */
 }
 
+/* Main Content */
 .main-content {
   max-width: 480px;
   margin: 0 auto;
+  padding-top: 3rem; /* Added padding-top for spacing */
 }
 
+/* Tabs */
+.TabsList {
+  display: flex;
+  margin-bottom: 1rem; /* Giảm khoảng cách dưới Tabs */
+}
+
+.TabsTrigger {
+  cursor: pointer;
+  border-radius: 9999px; /* Fully rounded corners */
+  border: 1px solid #d1d5db; /* Border color */
+  padding: 0.75rem 1.5rem; /* Padding cho các Tabs */
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem; /* Font size của các Tabs */
+}
+
+.TabsTrigger.active {
+  background-color: #74eac3; /* Màu nền cho tab đang hoạt động */
+  color: #ffffff; /* Màu chữ cho tab đang hoạt động */
+}
+
+.TabsTrigger.inactive {
+  background-color: #ffffff; /* Màu nền cho tab không hoạt động */
+  color: #1f2937; /* Màu chữ cho tab không hoạt động */
+}
+
+/* Tabs Content */
+.TabsContent {
+  margin-top: 1rem; /* Khoảng cách trên của nội dung tab */
+}
+
+/* Common Utilities */
 .rounded-lg {
   border-radius: 0.5rem; /* Adjust the border-radius */
 }
@@ -92,15 +133,11 @@ h1 {
 }
 
 .bg-blue-600 {
-  background-color: #2563eb; /* Blue background for active state */
+  background-color: #74eac3; /* Blue background for active state */
 }
 
 .text-white {
   color: #fff;
-}
-
-.bg-white {
-  background-color: #fff;
 }
 
 .text-gray-800 {
