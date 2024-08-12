@@ -12,7 +12,7 @@ const TodoForm: React.FC<PropTypes> = ({ setTodos }) => {
 
   const handleAddTodo = () => {
     if (newTodoText.trim() !== "") {
-      const newTodo = TodoService.addTodo(newTodoText);
+      const newTodo = {...TodoService.addTodo(newTodoText), isImportant: false };
       setTodos((prevTodos) => [...prevTodos, newTodo]);
       setNewTodoText("");
     }
@@ -23,6 +23,8 @@ const TodoForm: React.FC<PropTypes> = ({ setTodos }) => {
       handleAddTodo();
     }
   };
+
+  
 
   return (
     <div className="inputForm">

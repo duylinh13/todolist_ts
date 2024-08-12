@@ -58,7 +58,7 @@
 .editBtn > button {
   background: none; /* Remove any background */
   border: none; /* Remove borders */
-  color: #ffcc00; /* Yellow color for the edit icon */
+  color: #42a3c7; /* Yellow color for the edit icon */
   cursor: pointer;
   font-size: 1.5rem; /* Adjust size if needed */
 }

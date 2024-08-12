@@ -84,3 +84,7 @@ button {
 .todos::-webkit-scrollbar-track {
   background-color: #eee; /* Set the color of the track */
 }
+.completed {
+  text-decoration: line-through;
+  color: #999; /* Optional: gray out the text */
+}

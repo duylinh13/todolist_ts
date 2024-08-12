@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TodoTypes from "../todo";
 import TodoForm from "./TodoForm";
 import "../styles/TodoList.css";
-import { FaEdit, FaCheck } from "react-icons/fa";
+import { FaEdit, FaCheck, FaStar } from "react-icons/fa";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { GiCancel } from "react-icons/gi";
 
@@ -56,6 +56,14 @@ const TodoList: React.FC<TodoListProps> = ({ filter }) => {
     );
   };
 
+  const handleToggleImportant = (id: number) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, isImportant: !todo.isImportant } : todo
+      )
+    );
+  };
+
   const filteredTodos = todos.filter(todo => {
     if (filter === 'all') return true;
     if (filter === 'completed') return todo.completed;
@@ -94,9 +102,13 @@ const TodoList: React.FC<TodoListProps> = ({ filter }) => {
                   onChange={() => handleToggleCompletion(todo.id)}
                 />
                 <span className={todo.completed ? 'completed' : ''}>{todo.text}</span>
+                <button onClick={() => handleToggleImportant(todo.id)}>
+                  <FaStar color={todo.isImportant ? 'gold' : 'gray'} /> {/* Biểu tượng ngôi sao */}
+                </button>
                 <button onClick={() => handleEditStart(todo.id, todo.text)}>
                   <FaEdit />
                 </button>
+            
               </div>
             )}
             <button onClick={() => handleDeleteTodo(todo.id)}>

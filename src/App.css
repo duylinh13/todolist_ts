@@ -155,3 +155,7 @@ h1 {
 .mt-4 {
   margin-top: 1rem;
 }
+.important {
+  background-color: #ffeb3b; /* Màu vàng nhạt cho công việc quan trọng */
+  border-left: 4px solid #ff9800; /* Border cam để nhấn mạnh */
+}
