@@ -8,33 +8,24 @@ Delete Tasks: Remove tasks from the list.
 Toggle Completion: Mark tasks as completed or pending.
 Toggle Importance: Mark tasks as important or not important.
 Filter Tasks: View tasks based on their status (All, Pending, Completed).
-Persist Data: Store tasks in local storage to persist data across page reloads.
+Filter Tasks: View tasks based on their status (All, Pending, Completed).
+
 Technologies Used
 React: JavaScript library for building user interfaces.
 TypeScript: Adds static types to JavaScript for improved developer experience and safety.
 Vite: Fast build tool and development server.
 Radix UI: For the tabbed interface.
 ESLint: Linting tool for identifying and fixing problems in JavaScript/TypeScript code.
+
 Installation
 Clone the Repository
-
-1
-git clone https://github.com/your-username/todolist_react_ts.git
+git clone https://github.com/duylinh13/todolist_ts
 cd todolist_react_ts
-Install Dependencies
-
-2
 npm install
-Start the Development Server
-
-3
 npm run dev
-Open Your Browser
-
-Visit http://localhost:3000 to see the application in action.
+Open your browser and go to http://localhost:3000 to view the application.
 
 Project Structure
-src/: Contains all source code files.
 components/: Contains React components.
 TodoForm.tsx: Component for adding new tasks.
 TodoList.tsx: Component for displaying and managing tasks.
@@ -43,8 +34,7 @@ main.tsx: Entry point of the React application.
 todo.ts: TypeScript interface for Todo items.
 TodoService.ts: Service for handling local storage operations.
 styles/: Contains CSS files for styling components.
-public/: Static assets like the favicon and HTML file.
-.eslintrc.cjs: ESLint configuration file.
+
 Usage
 TodoForm Component
 Props
