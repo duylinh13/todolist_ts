@@ -17,6 +17,8 @@ const TodoList: React.FC<TodoListProps> = ({ filter }) => {
   });
   const [editingTodoId, setEditingTodoId] = useState<number | null>(null);
   const [editedTodoText, setEditedTodoText] = useState<string>("");
+  const [searchTerm, setSearchTerm] = useState<string>(""); // Đảm bảo khai báo biến này
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -64,15 +66,40 @@ const TodoList: React.FC<TodoListProps> = ({ filter }) => {
     );
   };
 
-  const filteredTodos = todos.filter(todo => {
-    if (filter === 'all') return true;
-    if (filter === 'completed') return todo.completed;
-    if (filter === 'pending') return !todo.completed;
-    return true;
+  const filteredTodos = todos
+    .filter(todo => {
+      if (filter === 'all') return true;
+      if (filter === 'completed') return todo.completed;
+      if (filter === 'pending') return !todo.completed;
+      return true;
+    })
+    .filter(todo => todo.text.toLowerCase().includes(searchTerm.toLowerCase()));
+
+  const sortedTodos = filteredTodos.sort((a, b) => {
+    if (sortOrder === 'asc') {
+      return a.text.localeCompare(b.text);
+    } else {
+      return b.text.localeCompare(a.text);
+    }
   });
+
 
   return (
     <div className="todoContainer">
+      <div className="search-sort-container">
+        <input
+          type="text"
+          className="search-input"
+          placeholder="Tìm kiếm nhiệm vụ..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <div className="sort-container">
+          <button className="sort-button" onClick={() => setSortOrder('asc')}>Sắp xếp A-Z</button>
+          <button className="sort-button" onClick={() => setSortOrder('desc')}>Sắp xếp Z-A</button>
+        </div>
+      </div>
+      
       <div>
         <TodoForm setTodos={setTodos} />
       </div>

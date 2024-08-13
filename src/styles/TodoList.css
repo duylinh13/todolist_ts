@@ -88,3 +88,35 @@ button {
   text-decoration: line-through;
   color: #999; /* Optional: gray out the text */
 }
+.search-sort-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+.sort-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sort-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  background-color: #f3f4f6;
+  transition: background-color 0.3s;
+}
+
+.sort-button:hover {
+  background-color: #e0e0e0;
+}

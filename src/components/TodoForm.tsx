@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
 import TodoService from "../TodoService";
 import TodoTypes from "../todo";
+import { useTranslation } from "react-i18next";
 import "../styles/TodoForm.css"
 
 interface PropTypes {
@@ -9,6 +10,7 @@ interface PropTypes {
 
 const TodoForm: React.FC<PropTypes> = ({ setTodos }) => {
   const [newTodoText, setNewTodoText] = useState<string>("");
+  const { t } = useTranslation();
 
   const handleAddTodo = () => {
     if (newTodoText.trim() !== "") {
@@ -34,9 +36,9 @@ const TodoForm: React.FC<PropTypes> = ({ setTodos }) => {
         onChange={(e) => setNewTodoText(e.target.value)}
         onKeyPress={handleKeyPress}  
         autoFocus={true}
-        placeholder="Add a Task"
+        placeholder={t("Add a Task")}
       />
-      <button onClick={handleAddTodo}>Add Todo</button>
+      <button onClick={handleAddTodo}>{t("Add Todo")}</button>
     </div>
   );
 };
