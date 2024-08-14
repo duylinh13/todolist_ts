@@ -10,6 +10,8 @@ const resources = {
       "Completed": "Completed",
       "What is today's to-do list?": "What is today's to-do list?",
       "Add Todo": "Add Todo",
+      "Sắp xếp A-Z": "Sort A-Z",
+      "Sắp xếp Z-A": "Sort Z-A"
     }
   },
   vi: {
@@ -20,6 +22,9 @@ const resources = {
       "Completed": "Đã hoàn thành",
       "What is today's to-do list?": "Danh sách công việc hôm nay là gì?",
       "Add Todo": "Thêm công việc",
+      "Sắp xếp A-Z": "Sắp xếp A-Z",
+      "Sắp xếp Z-A":  "Sắp xếp Z-A"
+
     }
   }
 };
